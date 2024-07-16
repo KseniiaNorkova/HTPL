@@ -1,4 +1,13 @@
-file_1, file_2 = input(), input()
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Проверяет вхождение точки в окружность")
+parser.add_argument('file_1', type=str, help='Путь к файлу с координатами и радиусом окружности')
+parser.add_argument('file_2', type=str, help='Путь к файлу с координатами точек')
+args = parser.parse_args()
+
+file_1 = args.file_1
+file_2 = args.file_2
 
 with open(file_1, 'rt', encoding='utf-8') as file_1:  # открытие 1 файла
     f1 = (line for line in file_1.readlines())  # построчное разделение файла

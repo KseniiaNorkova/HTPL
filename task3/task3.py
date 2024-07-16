@@ -1,4 +1,16 @@
 import json
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Проверяет вхождение точки в окружность")
+parser.add_argument('tests_path', type=str, help='Путь к файлу tests.json')
+parser.add_argument('values_path', type=str, help='Путь к файлу values.json')
+parser.add_argument('report_path', type=str, help='Путь к файлу report.json')
+args = parser.parse_args()
+
+tests_path = args.tests_path
+values_path = args.values_path
+report_path = args.report_path
 
 
 def make_report(tests_path, values_path, report_path):
@@ -23,6 +35,5 @@ def make_report(tests_path, values_path, report_path):
         json.dump(tests_f, f3, indent=4)  # создание/заполнение файла report
 
 
-file_tests, file_values, file_report = input(), input(), input()
-make_report(file_tests, file_values, file_report)
+make_report(tests_path, values_path, report_path)
 

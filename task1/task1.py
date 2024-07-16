@@ -1,5 +1,13 @@
-n, m = int(input()), int(input())  # ввод переменных раздельно
-# n, m = map(int, input().split())  # для ввода переменных одной строкой через пробел
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Выводит массив из первых элементов интервалов")
+parser.add_argument('n', type=int, help='Размер массива (от 1 до n)')
+parser.add_argument('m', type=int, help='Длина интервала')
+args = parser.parse_args()
+
+n = args.n
+m = args.m
 
 round_array = [*range(1, n + 1)] * m  # создается список элементов, образующих круговой массив
 answer = ''  # переменная для вывода

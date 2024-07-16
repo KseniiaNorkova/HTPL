@@ -1,4 +1,11 @@
-file_name = input()  # получение пути к файлу
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Выводит минимальное количество ходов для уравнения всех элементов")
+parser.add_argument('file_name', type=str, help='Путь к файлу с элементами массива')
+args = parser.parse_args()
+
+file_name = args.file_name
 
 with open(file_name, 'rt', encoding='utf-8') as file:  # открытие файла
     '''извлечение данных и приведение их к списку чисел'''
