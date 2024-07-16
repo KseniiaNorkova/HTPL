@@ -7,6 +7,8 @@ args = parser.parse_args()
 
 file_name = args.file_name
 
+# file_name = input()
+
 with open(file_name, 'rt', encoding='utf-8') as file:  # открытие файла
     '''извлечение данных и приведение их к списку чисел'''
     numbers = [int(line.strip()) for line in file.readlines()]

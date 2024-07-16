@@ -9,6 +9,8 @@ args = parser.parse_args()
 n = args.n
 m = args.m
 
+# n, m = int(input()), int(input())
+
 round_array = [*range(1, n + 1)] * m  # создается список элементов, образующих круговой массив
 answer = ''  # переменная для вывода
 

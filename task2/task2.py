@@ -9,6 +9,8 @@ args = parser.parse_args()
 file_1 = args.file_1
 file_2 = args.file_2
 
+# file_1, file_2 = input(), input()
+
 with open(file_1, 'rt', encoding='utf-8') as file_1:  # открытие 1 файла
     f1 = (line for line in file_1.readlines())  # построчное разделение файла
     x, y = map(int, next(f1).strip().split())  # извлечение координат центра окружности

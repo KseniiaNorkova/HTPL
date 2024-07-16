@@ -12,6 +12,8 @@ tests_path = args.tests_path
 values_path = args.values_path
 report_path = args.report_path
 
+# tests_path, values_path, report_path = input(), input(), input()
+
 
 def make_report(tests_path, values_path, report_path):
     """функция для заполнения отчета данными файла values на основе структуры tests"""
